@@ -9,7 +9,7 @@ function Edit() {
 
   useEffect(() => {
     axios
-      .get(`/read/${id}`) // ✅ match backend
+      .get(`/read/${id}`) 
       .then((res) => {
         setData(Array.isArray(res.data) ? res.data : []);
       })
@@ -20,7 +20,7 @@ function Edit() {
     e.preventDefault();
 
     axios
-      .put(`/update/${id}`, data[0]) // ✅ better REST method
+      .put(`/update/${id}`, data[0]) 
       .then((res) => {
         console.log(res);
         navigate("/");
